@@ -425,13 +425,14 @@ void menuComprobante()
         {
         case 1:
             int tipoComp;
+            Login user;
             gotoxy(40,5);
             cout << "Factura: 1  Nota de Crédito: 2"<< endl;
             gotoxy(40,6);
             cout<<" > ";
             cin>>tipoComp;
             system("cls");
-            reg.cargar(tipoComp);
+            reg.cargar(tipoComp,user.getUsuarioChar());
             if(reg.getEstado()==true)
             {
                 if(reg.guardarEnDisco()==true)

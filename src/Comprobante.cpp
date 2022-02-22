@@ -14,6 +14,8 @@
 #include "rlutil.h"
 #include "Fecha.h"
 #include "Reportes.h"
+#include "Mensaje.h"
+#include "Login.h"
 
 using namespace std;
 using namespace rlutil;

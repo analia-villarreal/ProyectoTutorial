@@ -57,7 +57,7 @@ class Comprobante
         float getImporteTotal();
         int getEstado();
         const char * getUsuarioLog();
-        void cargar(int);
+        void cargar(int,const char*);
         void mostrar();
         bool leerDeDisco(int);
         bool guardarEnDisco();

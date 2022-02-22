@@ -924,3 +924,237 @@
 	"Proveedor.h"
 	"rlutil.h"
 
+1644346490 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\main.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<cstdio>
+	<conio.h>
+	<ctime>
+	<iomanip>
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"rlutil.h"
+	"Funciones.h"
+	"Reportes.h"
+	"Mensaje.h"
+	"Login.h"
+
+1645489256 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\comprobante.h
+	"Fecha.h"
+	"Impuesto.h"
+	"Proveedor.h"
+
+1645299222 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\fecha.h
+	<time.h>
+
+1623716997 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\impuesto.h
+
+1644531474 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\proveedor.h
+	"Impuesto.h"
+
+1636067822 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\mediosdepagos.h
+
+1636596733 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\ordendepago.h
+	"Fecha.h"
+	"Impuesto.h"
+	"Proveedor.h"
+	"MediosDePagos.h"
+
+1644620578 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
+	"Funciones.h"
+
+1644345828 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
+	<string>
+
+1604164361 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1635461274 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\reportes.h
+
+1636494544 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\mensaje.h
+
+1644346155 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\login.h
+	<string>
+
+1635466130 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\fecha.cpp
+	"Fecha.h"
+	"Proveedor.h"
+	"Impuesto.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	"rlutil.h"
+	<cstdio>
+	<conio.h>
+	<iomanip>
+
+1635461274 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\impuesto.cpp
+	"Impuesto.h"
+	"Proveedor.h"
+	"PlanDeCuentas.h"
+	"rlutil.h"
+	"Funciones.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	<cstdio>
+
+1644346738 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\login.cpp
+	"Login.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<cstdio>
+	<conio.h>
+	<ctime>
+	<iomanip>
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"rlutil.h"
+	"Reportes.h"
+	"Mensaje.h"
+	"Funciones.h"
+
+1636598550 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mediosdepagos.cpp
+	"MediosDePagos.h"
+	<iostream>
+	"Impuesto.h"
+	"Proveedor.h"
+	"PlanDeCuentas.h"
+	"rlutil.h"
+	"Funciones.h"
+	"OrdenDePago.h"
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	<cstdio>
+
+1636494520 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mensaje.cpp
+	<iostream>
+	<cstdlib>
+	"rlutil.h"
+	"Mensaje.h"
+
+1636599543 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
+	"OrdenDePago.h"
+	"Impuesto.h"
+	"Proveedor.h"
+	"PlanDeCuentas.h"
+	"rlutil.h"
+	"Funciones.h"
+	"MediosDePagos.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	<cstdio>
+
+1644622915 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<cstdio>
+	<conio.h>
+	<ctime>
+	<iomanip>
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"rlutil.h"
+	"Funciones.h"
+	"Reportes.h"
+
+1644534214 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\proveedor.cpp
+	"Proveedor.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"PlanDeCuentas.h"
+	"rlutil.h"
+	"Funciones.h"
+	"Reportes.h"
+	<iomanip>
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<conio.h>
+	<clocale>
+
+1635461274 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\reportes.cpp
+	"Reportes.h"
+	"Funciones.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<cstdio>
+	<conio.h>
+	<ctime>
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"rlutil.h"
+
+1645489218 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+	"Funciones.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<cstdio>
+	<conio.h>
+	<ctime>
+	<iomanip>
+	<fstream>
+	"Comprobante.h"
+	"Fecha.h"
+	"Impuesto.h"
+	"MediosDePagos.h"
+	"OrdenDePago.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"rlutil.h"
+	"Reportes.h"
+	"Mensaje.h"
+	"Login.h"
+
