@@ -173,7 +173,6 @@ int  Comprobante::getEstado()
 {
     return _estado;
 }
-
 const char * Comprobante::getUsuarioLog()
 {
     return _usuarioLogueado;
@@ -283,11 +282,11 @@ void Comprobante::cargar(int tipo,const char *usuario)
     // Mostrar opciones
     gotoxy(13,36);cout<<"PV: "<<endl;
     gotoxy(17,36);cin>> _pv;
-    gotoxy(19,36);cout<<"NUMERO: "<<endl;
+    gotoxy(22,36);cout<<"NUMERO: "<<endl;
     gotoxy(27,36);cin>> _numFac;
     //cuenta contable del proveedor
     gotoxy(4,37);cout<<"CUENTA CONTABLE"<<endl;
-    //gotoxy(4,38);
+    rand_cuentas_contables();
     gotoxy(4,39);cout<<"CANTIDAD: "<<endl;
     gotoxy(14,39);cin >> _cantidad;
     gotoxy(20,39);cout<<"PRECIO: $ "<<endl;
@@ -306,6 +305,7 @@ void Comprobante::cargar(int tipo,const char *usuario)
     gotoxy(60,39);cout<<"TOTAL: $ "<< setprecision(2) <<_importeTotal<< endl;
 
     setEstado(1);
+    setUserLog(usuario);
     resetColor();
 
 }

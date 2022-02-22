@@ -970,7 +970,7 @@
 1644620578 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
 	"Funciones.h"
 
-1644345828 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
+1645495386 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
 	<string>
 
 1604164361 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\rlutil.h
@@ -1154,6 +1154,25 @@
 	"PlanDeCuentas.h"
 	"Proveedor.h"
 	"rlutil.h"
+	"Reportes.h"
+	"Mensaje.h"
+	"Login.h"
+
+1645494901 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<conio.h>
+	<clocale>
+	<cstdio>
+	<iomanip>
+	"Comprobante.h"
+	"Impuesto.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"Funciones.h"
+	"rlutil.h"
+	"Fecha.h"
 	"Reportes.h"
 	"Mensaje.h"
 	"Login.h"

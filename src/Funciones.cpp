@@ -326,6 +326,62 @@ void rand_proveedoresOP()
 
 }
 
+void rand_cuentas_contables()
+{
+
+    int vecCuentas[117]= {};
+
+    PlanDeCuentas reg;
+
+    int i=0;
+
+    while(reg.leerDeDisco(i)){
+
+            if(reg.getTipoCuenta()==2){
+
+            vecCuentas[i]=reg.getCuentaContable();
+        }
+
+    }
+
+
+    int vecNum[10]= {};
+
+    int prov;
+
+    prov = 117;
+
+    int i=0;
+    int valor;
+
+    while(i<10)
+    {
+
+        valor=rand()%prov+1;
+        while(sinRepetidosDiez(valor,vecNum)==false)
+        {
+            vecNum[i]=valor;
+            i++;
+        }
+
+    }
+
+    for(int j=0; j<10; j++)
+    {
+        PlanDeCuentas reg;
+
+        int pos;
+
+        pos=buscarPosCuenta(vecNum[j]);
+
+        reg.leerDeDisco(pos);
+        rlutil::locate(83,46+j);
+        cout<<vecNum[j]<<" - "<< reg.getCuentaContable()<<" - "<<reg.getDescripcionCuenta()<<endl;
+
+    }
+
+}
+
 void listarProveedores()
 {
     int i=0;

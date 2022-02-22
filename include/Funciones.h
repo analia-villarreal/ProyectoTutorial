@@ -63,6 +63,8 @@ int crearCodigoUsuario(const char *);
 
 void crearUsuario();
 
+void rand_cuentas_contables();
+
 void ingresarUsuario();
 
 void resetTablas();
