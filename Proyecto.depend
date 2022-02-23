@@ -967,7 +967,7 @@
 	"Proveedor.h"
 	"MediosDePagos.h"
 
-1644620578 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
+1645656628 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
 	"Funciones.h"
 
 1645495386 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
@@ -1135,7 +1135,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645576397 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645658261 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1158,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645573005 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645658479 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>

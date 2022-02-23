@@ -331,31 +331,25 @@ void rand_proveedoresOP()
 void rand_cuentas_contables()
 {
 
-    int vecCuentas[31]={};
 
-    PlanDeCuentas reg;
 
-    int i = 0;
-    while(reg.leerDeDisco(i))
+    int vecCuentas[31]={11244,11311,11321,12214,12221,12231,12241,12251,5333,5334,5351,5354,5363,5367,5369,53611,53610,5371,5384,5388,5389,53111,53112,53114,53115,53116,53117,53119,53125,53135,53139};
+
+
+    for(int j=0; j<31; j++)
     {
-        if (reg.getTipoCuenta()==2)
-        {
+        PlanDeCuentas reg;
 
-            rlutil::locate(85,32);
-            reg.mostrar();
+        int pos;
 
-            //vecCuentas[i-1]=reg.getCuentaContable();
-        }
-        i++;
+        pos=buscarPosCuenta(vecCuentas[j]);
+
+        reg.leerDeDisco(pos);
+        rlutil::locate(83,36+j);
+        cout<<vecCuentas[j]<<" - "<< reg.getDescripcionCuenta()<<endl;
+
     }
-   // for(int j=0; j<31;j++){
-   //
-   //
-   //     rlutil::locate(85,26+j);
-   //     cout<<vecCuentas[j]<<" - "<< buscarNombreCuentaContable(vecCuentas[j+1])<<endl;
-   //
-   // }
-   //
+
 
 
 }
@@ -471,13 +465,13 @@ void menuComprobante()
             {
                 if(reg.guardarEnDisco()==true)
                 {
-                    gotoxy(4,41);
+                    gotoxy(4,55);
                     cout<<"REGISTRO GRABADO EN EL ARCHIVO"<<endl;
                     resetColor();
                 }
                 else
                 {
-                    gotoxy(4,41);
+                    gotoxy(4,55);
                     cout<<"NO SE PUDO GRABAR EL REGISTRO"<<endl;
                     resetColor();
                 }
@@ -486,7 +480,7 @@ void menuComprobante()
             {
                 cout<<"ERROR DE DATOS"<<endl;
             }
-            gotoxy(4,42);
+            gotoxy(4,56);
             system("pause");
             break;
         case 2: rand_cuentas_contables();
@@ -930,7 +924,7 @@ void ingresarUsuario()
 
 void resetTablas(){
 
-    Proveedor reg1(1,"2MS",30708909382,902,"Buenos Aires","EX",1,0,1,1);
+Proveedor reg1(1,"2MS",30708909382,902,"Buenos Aires","EX",1,0,1,1);
 Proveedor reg2(2,"A MUTZ Y CIA SOC ANONIMA",30633340494,902,"Buenos Aires","RI",1,1,1,1);
 Proveedor reg3(3,"ABBOUD MARCELO BANAIOT",23167297269,902,"Buenos Aires","RI",1,1,1,1);
 Proveedor reg4(4,"ACG AIRE S.R.L",30715224913,902,"Buenos Aires","RI",1,1,1,1);
@@ -1943,8 +1937,8 @@ PlanDeCuentas regis218(5366,"Mano de obra mantenimiento",4,1);
 PlanDeCuentas regis219(5367,"Servicio de limpieza",2,1);
 PlanDeCuentas regis220(5368,"Elementos seg. Industrial",4,1);
 PlanDeCuentas regis221(5369,"Insumos de limpieza y otros",2,1);
-PlanDeCuentas regis222(5370,"Lavanderia de Ropa",2,1);
-PlanDeCuentas regis223(5371,"Residuos especiales",2,1);
+PlanDeCuentas regis222(53610,"Lavanderia de Ropa",2,1);
+PlanDeCuentas regis223(53611,"Residuos especiales",2,1);
 PlanDeCuentas regis224(537,"SEGUROS",1,0);
 PlanDeCuentas regis225(5371,"Seguro Autos",2,1);
 PlanDeCuentas regis226(5372,"Seguro incendio",4,1);

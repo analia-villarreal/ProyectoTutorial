@@ -179,7 +179,7 @@ const char * Comprobante::getUsuarioLog()
 }
 void Comprobante::cargar(int tipo,const char *usuario)
 {
-    marco_comprobante(1,2,80,48);
+    marco_comprobante(1,2,80,68);
 
     setlocale(LC_ALL, "Spanish");
     int x;
@@ -277,21 +277,21 @@ void Comprobante::cargar(int tipo,const char *usuario)
 
     gotoxy(4,35);buscarNombProveedor(_idProveedor);
 
-    gotoxy(4,36);cout<<"LETRA: "<<endl;
-    gotoxy(11,36);cin>> _letra;
+    gotoxy(13,38);cout<<"LETRA: "<<endl;
+    gotoxy(21,38);cin>> _letra;
     // Mostrar opciones
-    gotoxy(13,36);cout<<"PV: "<<endl;
-    gotoxy(17,36);cin>> _pv;
-    gotoxy(22,36);cout<<"NUMERO: "<<endl;
-    gotoxy(29,36);cin>> _numFac;
+    gotoxy(13,40);cout<<"PV: "<<endl;
+    gotoxy(17,40);cin>> _pv;
+    gotoxy(22,40);cout<<"NUMERO: "<<endl;
+    gotoxy(32,40);cin>> _numFac;
     //cuenta contable del proveedor
-    gotoxy(4,37);cout<<"CUENTA CONTABLE"<<endl;
+    gotoxy(4,45);cout<<"CUENTA CONTABLE: "<<endl;
     rand_cuentas_contables();
-    gotoxy(17,37);cin>> _cuentaContable;
-    gotoxy(4,39);cout<<"CANTIDAD: "<<endl;
-    gotoxy(14,39);cin >> _cantidad;
-    gotoxy(20,39);cout<<"PRECIO: $ "<<endl;
-    gotoxy(30,39);cin >> _PU;
+    gotoxy(25,45);cin>> _cuentaContable;
+    gotoxy(4,47);cout<<"CANTIDAD: "<<endl;
+    gotoxy(14,47);cin >> _cantidad;
+    gotoxy(4,52);cout<<"PRECIO: $ "<<endl;
+    gotoxy(15,52);cin >> _PU;
     float tasa;
     tasa=buscarAlicuota(_idProveedor);
     float IVA;
@@ -299,11 +299,11 @@ void Comprobante::cargar(int tipo,const char *usuario)
     IVA=(((_PU*_cantidad)*tasa)/100);
     setIVA(IVA);
     cout << fixed;
-    gotoxy(37,39);cout<<"IVA: $  "<< setprecision(2) <<getIVA()<<endl;
+    gotoxy(37,52);cout<<"IVA: $  "<< setprecision(2) <<getIVA()<<endl;
 
     _importeTotal=(_PU*_cantidad)+IVA;
     cout << fixed;
-    gotoxy(60,39);cout<<"TOTAL: $ "<< setprecision(2) <<_importeTotal<< endl;
+    gotoxy(60,52);cout<<"TOTAL: $ "<< setprecision(2) <<_importeTotal<< endl;
 
     setEstado(1);
     setUserLog(usuario);
