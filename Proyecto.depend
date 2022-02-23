@@ -1077,7 +1077,7 @@
 	<clocale>
 	<cstdio>
 
-1644622915 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
+1645575776 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>
@@ -1135,7 +1135,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645489218 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645576397 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1158,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645494901 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645573005 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>

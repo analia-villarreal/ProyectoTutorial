@@ -326,59 +326,37 @@ void rand_proveedoresOP()
 
 }
 
+
+
 void rand_cuentas_contables()
 {
 
-    int vecCuentas[117]= {};
+    int vecCuentas[31]={};
 
     PlanDeCuentas reg;
 
-    int i=0;
-
-    while(reg.leerDeDisco(i)){
-
-            if(reg.getTipoCuenta()==2){
-
-            vecCuentas[i]=reg.getCuentaContable();
-        }
-
-    }
-
-
-    int vecNum[10]= {};
-
-    int prov;
-
-    prov = 117;
-
-    int i=0;
-    int valor;
-
-    while(i<10)
+    int i = 0;
+    while(reg.leerDeDisco(i))
     {
-
-        valor=rand()%prov+1;
-        while(sinRepetidosDiez(valor,vecNum)==false)
+        if (reg.getTipoCuenta()==2)
         {
-            vecNum[i]=valor;
-            i++;
+
+            rlutil::locate(85,32);
+            reg.mostrar();
+
+            //vecCuentas[i-1]=reg.getCuentaContable();
         }
-
+        i++;
     }
+   // for(int j=0; j<31;j++){
+   //
+   //
+   //     rlutil::locate(85,26+j);
+   //     cout<<vecCuentas[j]<<" - "<< buscarNombreCuentaContable(vecCuentas[j+1])<<endl;
+   //
+   // }
+   //
 
-    for(int j=0; j<10; j++)
-    {
-        PlanDeCuentas reg;
-
-        int pos;
-
-        pos=buscarPosCuenta(vecNum[j]);
-
-        reg.leerDeDisco(pos);
-        rlutil::locate(83,46+j);
-        cout<<vecNum[j]<<" - "<< reg.getCuentaContable()<<" - "<<reg.getDescripcionCuenta()<<endl;
-
-    }
 
 }
 
@@ -511,7 +489,9 @@ void menuComprobante()
             gotoxy(4,42);
             system("pause");
             break;
-        case 2:
+        case 2: rand_cuentas_contables();
+            system("pause");
+            break;
         //BAJA COMPROBANTE;
         case 3:
             reg.listarComprobantes();
@@ -1786,29 +1766,29 @@ PlanDeCuentas regis41(11231,"Adelantos al Personal",4,1);
 PlanDeCuentas regis42(11232,"Prestamos al Personal",4,1);
 PlanDeCuentas regis43(1124,"OTROS CREDITOS",1,0);
 PlanDeCuentas regis44(11241,"Depositos en Garantia",4,1);
-PlanDeCuentas regis45(11242,"Anticipos a proveedores",2,1);
-PlanDeCuentas regis46(11243,"Adelantos a Rendir",2,1);
+PlanDeCuentas regis45(11242,"Anticipos a proveedores",4,1);
+PlanDeCuentas regis46(11243,"Adelantos a Rendir",4,1);
 PlanDeCuentas regis47(11244,"Seguros pagados a Devengar",2,1);
-PlanDeCuentas regis48(11245,"Gastos a Refacturar",2,1);
-PlanDeCuentas regis49(11246,"Otros Creditos",2,1);
+PlanDeCuentas regis48(11245,"Gastos a Refacturar",4,1);
+PlanDeCuentas regis49(11246,"Otros Creditos",4,1);
 PlanDeCuentas regis50(113,"BIENES DE CAMBIO",1,0);
 PlanDeCuentas regis51(1131,"MATERIAS PRIMAS",1,0);
 PlanDeCuentas regis52(11311,"Materias primas nacionales",2,1);
-PlanDeCuentas regis53(11312,"Materias primas importadas",2,1);
+PlanDeCuentas regis53(11312,"Materias primas importadas",4,1);
 PlanDeCuentas regis54(1132,"MATERIAL EMPAQUE",1,0);
 PlanDeCuentas regis55(11321,"Material empaque nacional",2,1);
-PlanDeCuentas regis56(11322,"Material empaque importado",2,1);
+PlanDeCuentas regis56(11322,"Material empaque importado",4,1);
 PlanDeCuentas regis57(1133,"PRODUCTO TERMINADO",1,0);
-PlanDeCuentas regis58(11331,"Producto Terminado Nacional",2,1);
-PlanDeCuentas regis59(11332,"Producto Terminado Importado",2,1);
+PlanDeCuentas regis58(11331,"Producto Terminado Nacional",4,1);
+PlanDeCuentas regis59(11332,"Producto Terminado Importado",4,1);
 PlanDeCuentas regis60(12,"ACTIVO NO CORRIENTE",1,0);
 PlanDeCuentas regis61(121,"CREDITOS",1,0);
 PlanDeCuentas regis62(1211,"CREDITOS FISCALES y SOCIALES",1,0);
 PlanDeCuentas regis63(12111,"Credito por Imp. a las gananc.",4,1);
 PlanDeCuentas regis64(122,"BIENES DE USO",1,0);
 PlanDeCuentas regis65(1221,"INMUEBLES",1,0);
-PlanDeCuentas regis66(12211,"Terreno",2,1);
-PlanDeCuentas regis67(12212,"Inmuebles",2,1);
+PlanDeCuentas regis66(12211,"Terreno",4,1);
+PlanDeCuentas regis67(12212,"Inmuebles",4,1);
 PlanDeCuentas regis68(12213,"Amortizacion Acumul. Inmuebles",4,1);
 PlanDeCuentas regis69(12214,"Mejoras en Inmuebles",2,1);
 PlanDeCuentas regis70(12215,"Amort. Acum. Mejoras Inmuebles",4,1);
@@ -1902,7 +1882,7 @@ PlanDeCuentas regis157(4221,"Ingresos Varios",4,0);
 PlanDeCuentas regis158(4222,"Ingresos Varios ME",4,0);
 PlanDeCuentas regis159(423,"INGRESOS FINANCIEROS",1,0);
 PlanDeCuentas regis160(4231,"INGRESOS POR OP. BANCARIAS",1,0);
-PlanDeCuentas regis161(4231,"Intereses Cobrados en op bs",4,0);
+PlanDeCuentas regis161(4231,"Intereses Cobrados en operaciones bancarias",4,0);
 PlanDeCuentas regis162(4232,"Diferencia de Cambio Positivas",4,0);
 PlanDeCuentas regis163(5,"EGRESOS",1,0);
 PlanDeCuentas regis164(51,"COSTO DE VENTAS",1,0);
@@ -1925,15 +1905,15 @@ PlanDeCuentas regis180(5321,"Cargas Sociales Sueldos",4,0);
 PlanDeCuentas regis181(5322,"Cargas Sociales SAC",4,0);
 PlanDeCuentas regis182(5323,"Cargas Sociales Vacaciones",4,0);
 PlanDeCuentas regis183(533,"OTROS GS. EN PERSONAL",1,0);
-PlanDeCuentas regis184(5331,"Premios",2,0);
-PlanDeCuentas regis185(5332,"Atenciones al personal",2,1);
+PlanDeCuentas regis184(5331,"Premios",4,0);
+PlanDeCuentas regis185(5332,"Atenciones al personal",4,1);
 PlanDeCuentas regis186(5333,"Almuerzo y comedor",2,1);
 PlanDeCuentas regis187(5334,"Ropa de Trabajo",2,1);
-PlanDeCuentas regis188(5335,"Medicina laboral",2,1);
-PlanDeCuentas regis189(5336,"Consumos del personal",2,1);
-PlanDeCuentas regis190(5337,"Cocheras",2,1);
-PlanDeCuentas regis191(5338,"Guarderias",2,1);
-PlanDeCuentas regis192(5339,"Otros Gs. en Personal",2,1);
+PlanDeCuentas regis188(5335,"Medicina laboral",4,1);
+PlanDeCuentas regis189(5336,"Consumos del personal",4,1);
+PlanDeCuentas regis190(5337,"Cocheras",4,1);
+PlanDeCuentas regis191(5338,"Guarderias",4,1);
+PlanDeCuentas regis192(5339,"Otros Gs. en Personal",4,1);
 PlanDeCuentas regis193(534,"AMORTIZACIONES Dir",1,0);
 PlanDeCuentas regis194(5341,"Amortizacion Inmueble",4,0);
 PlanDeCuentas regis195(5342,"Amort. Maq. Y Equipos",4,0);
@@ -1944,104 +1924,105 @@ PlanDeCuentas regis199(5346,"Amort. Bienes Intangibles",4,0);
 PlanDeCuentas regis200(5347,"Amortizacion de Eq. de Computa",4,0);
 PlanDeCuentas regis201(535,"HONORARIOS.",1,0);
 PlanDeCuentas regis202(5351,"Selección de Personal",2,1);
-PlanDeCuentas regis203(5352,"Honorarios directores",2,1);
-PlanDeCuentas regis204(5353,"Honorarios Seg. e Higiene",2,1);
+PlanDeCuentas regis203(5352,"Honorarios directores",4,1);
+PlanDeCuentas regis204(5353,"Honorarios Seg. e Higiene",4,1);
 PlanDeCuentas regis205(5354,"Honorarios auditoria",2,1);
-PlanDeCuentas regis206(5355,"Honorarios asesoria legal",2,1);
-PlanDeCuentas regis207(5356,"Honorarios seguridad",2,1);
-PlanDeCuentas regis208(5357,"Honorarios liq. haberes",2,1);
-PlanDeCuentas regis209(5358,"Honorarios escribanos",2,1);
-PlanDeCuentas regis210(5359,"Honorarios tercerizaciones",2,1);
-PlanDeCuentas regis211(5360,"Otros Honorarios varios",2,1);
+PlanDeCuentas regis206(5355,"Honorarios asesoria legal",4,1);
+PlanDeCuentas regis207(5356,"Honorarios seguridad",4,1);
+PlanDeCuentas regis208(5357,"Honorarios liq. haberes",4,1);
+PlanDeCuentas regis209(5358,"Honorarios escribanos",4,1);
+PlanDeCuentas regis210(5359,"Honorarios tercerizaciones",4,1);
+PlanDeCuentas regis211(5360,"Otros Honorarios varios",4,1);
 PlanDeCuentas regis212(536,"MANTENIMIENTO",1,0);
-PlanDeCuentas regis213(5361,"Analisis de efluentes",2,1);
-PlanDeCuentas regis214(5362,"Analisis de aguas",2,1);
+PlanDeCuentas regis213(5361,"Analisis de efluentes",4,1);
+PlanDeCuentas regis214(5362,"Analisis de aguas",4,1);
 PlanDeCuentas regis215(5363,"Materiales mantenimiento",2,1);
-PlanDeCuentas regis216(5364,"Repuestos",2,1);
-PlanDeCuentas regis217(5365,"Servicios de mantenimiento",2,1);
-PlanDeCuentas regis218(5366,"Mano de obra mantenimiento",2,1);
+PlanDeCuentas regis216(5364,"Repuestos",4,1);
+PlanDeCuentas regis217(5365,"Servicios de mantenimiento",4,1);
+PlanDeCuentas regis218(5366,"Mano de obra mantenimiento",4,1);
 PlanDeCuentas regis219(5367,"Servicio de limpieza",2,1);
-PlanDeCuentas regis220(5368,"Elementos seg. Industrial",2,1);
+PlanDeCuentas regis220(5368,"Elementos seg. Industrial",4,1);
 PlanDeCuentas regis221(5369,"Insumos de limpieza y otros",2,1);
 PlanDeCuentas regis222(5370,"Lavanderia de Ropa",2,1);
 PlanDeCuentas regis223(5371,"Residuos especiales",2,1);
 PlanDeCuentas regis224(537,"SEGUROS",1,0);
 PlanDeCuentas regis225(5371,"Seguro Autos",2,1);
-PlanDeCuentas regis226(5372,"Seguro incendio",2,1);
-PlanDeCuentas regis227(5373,"Seguro de vida",2,1);
-PlanDeCuentas regis228(5374,"Seguro accidente trabajo",2,1);
-PlanDeCuentas regis229(5375,"Otros Seguros",2,1);
+PlanDeCuentas regis226(5372,"Seguro incendio",4,1);
+PlanDeCuentas regis227(5373,"Seguro de vida",4,1);
+PlanDeCuentas regis228(5374,"Seguro accidente trabajo",4,1);
+PlanDeCuentas regis229(5375,"Otros Seguros",4,1);
 PlanDeCuentas regis230(538,"VIATICOS Y MOVILIDAD",1,0);
-PlanDeCuentas regis231(5381,"Movilidad",2,1);
-PlanDeCuentas regis232(5382,"Gastos de Kilometraje",2,1);
-PlanDeCuentas regis233(5383,"Gastos de representacion",2,1);
+PlanDeCuentas regis231(5381,"Movilidad",4,1);
+PlanDeCuentas regis232(5382,"Gastos de Kilometraje",4,1);
+PlanDeCuentas regis233(5383,"Gastos de representacion",4,1);
 PlanDeCuentas regis234(5384,"Gastos de comida",2,1);
-PlanDeCuentas regis235(5385,"Gastos de Giras",2,1);
-PlanDeCuentas regis236(5386,"Pasajes al exterior",2,1);
-PlanDeCuentas regis237(5387,"Pasajes locales",2,1);
+PlanDeCuentas regis235(5385,"Gastos de Giras",4,1);
+PlanDeCuentas regis236(5386,"Pasajes al exterior",4,1);
+PlanDeCuentas regis237(5387,"Pasajes locales",4,1);
 PlanDeCuentas regis238(5388,"Viaticos y remises",2,1);
 PlanDeCuentas regis239(5389,"Motomensajeria",2,1);
-PlanDeCuentas regis240(5390,"Otros fletes",2,1);
-PlanDeCuentas regis241(5391,"Combustible",2,1);
-PlanDeCuentas regis242(5392,"Estacionamiento",2,1);
+PlanDeCuentas regis240(5390,"Otros fletes",4,1);
+PlanDeCuentas regis241(5391,"Combustible",4,1);
+PlanDeCuentas regis242(5392,"Estacionamiento",4,1);
 PlanDeCuentas regis243(539,"GS PROMOC y COMERCIALES",1,0);
-PlanDeCuentas regis244(5391,"Regalias pagadas",2,1);
-PlanDeCuentas regis245(5392,"Entregas sin cargo",2,1);
-PlanDeCuentas regis246(5393,"Publicidad institucional",2,1);
-PlanDeCuentas regis247(5394,"Desarrollo nuevos prod.",2,1);
-PlanDeCuentas regis248(5395,"Diseño campañas publicidad",2,1);
-PlanDeCuentas regis249(5396,"Avisos publicitarios",2,1);
-PlanDeCuentas regis250(5397,"Material promocional",2,1);
-PlanDeCuentas regis251(5398,"Arte y diseño mat. Empaque",2,1);
-PlanDeCuentas regis252(5399,"Otros gastos comerciales vs",2,1);
-PlanDeCuentas regis253(5400,"Comisiones comerciales",2,1);
+PlanDeCuentas regis244(5391,"Regalias pagadas",4,1);
+PlanDeCuentas regis245(5392,"Entregas sin cargo",4,1);
+PlanDeCuentas regis246(5393,"Publicidad institucional",4,1);
+PlanDeCuentas regis247(5394,"Desarrollo nuevos prod.",4,1);
+PlanDeCuentas regis248(5395,"Diseño campañas publicidad",4,1);
+PlanDeCuentas regis249(5396,"Avisos publicitarios",4,1);
+PlanDeCuentas regis250(5397,"Material promocional",4,1);
+PlanDeCuentas regis251(5398,"Arte y diseño mat. Empaque",4,1);
+PlanDeCuentas regis252(5399,"Otros gastos comerciales varios",4,1);
+PlanDeCuentas regis253(5400,"Comisiones comerciales",4,1);
 PlanDeCuentas regis254(5310,"IMPUESTOS",1,0);
-PlanDeCuentas regis255(53101,"Impuesto a las ganancias",2,0);
-PlanDeCuentas regis256(53102,"Imp. Seguridad e Higiene",2,1);
-PlanDeCuentas regis257(53103,"Impuesto a los sellos",2,1);
-PlanDeCuentas regis258(53104,"Imp. Ingresos Brutos",2,0);
-PlanDeCuentas regis259(53105,"IVA No computable",2,1);
-PlanDeCuentas regis260(53106,"Imp. Ley 25413",2,1);
-PlanDeCuentas regis261(53107,"Tasas diversas",2,1);
-PlanDeCuentas regis262(53108,"Impuestos diversos",2,1);
-PlanDeCuentas regis263(53109,"Intereses resarcitorios",2,1);
-PlanDeCuentas regis264(53110,"Intereses moratorias",2,1);
+PlanDeCuentas regis255(53101,"Impuesto a las ganancias",4,0);
+PlanDeCuentas regis256(53102,"Imp. Seguridad e Higiene",4,1);
+PlanDeCuentas regis257(53103,"Impuesto a los sellos",4,1);
+PlanDeCuentas regis258(53104,"Imp. Ingresos Brutos",4,0);
+PlanDeCuentas regis259(53105,"IVA No computable",4,1);
+PlanDeCuentas regis260(53106,"Imp. Ley 25413",4,1);
+PlanDeCuentas regis261(53107,"Tasas diversas",4,1);
+PlanDeCuentas regis262(53108,"Impuestos diversos",4,1);
+PlanDeCuentas regis263(53109,"Intereses resarcitorios",4,1);
+PlanDeCuentas regis264(53110,"Intereses moratorias",4,1);
 PlanDeCuentas regis265(5311,"GASTOS COMP. Y OFICINA",1,0);
 PlanDeCuentas regis266(53111,"Correos",2,1);
 PlanDeCuentas regis267(53112,"Telefonos fijos",2,1);
-PlanDeCuentas regis268(53113,"Telefonos celulares",2,1);
+PlanDeCuentas regis268(53113,"Telefonos celulares",4,1);
 PlanDeCuentas regis269(53114,"Gas",2,1);
 PlanDeCuentas regis270(53115,"Fuerza motriz",2,1);
 PlanDeCuentas regis271(53116,"Agua",2,1);
 PlanDeCuentas regis272(53117,"Librería y art. Oficina",2,1);
-PlanDeCuentas regis273(53118,"Insumos computacion",2,1);
+PlanDeCuentas regis273(53118,"Insumos computacion",4,1);
 PlanDeCuentas regis274(53119,"Servicios computacion",2,1);
-PlanDeCuentas regis275(53120,"Gastos Varios Oficina",2,1);
+PlanDeCuentas regis275(53120,"Gastos Varios Oficina",4,1);
 PlanDeCuentas regis276(5312,"GASTOS PRODUCTIVOS",1,0);
-PlanDeCuentas regis277(53121,"Conservacion de productos",2,1);
-PlanDeCuentas regis278(53122,"Materiales de produccion",2,1);
-PlanDeCuentas regis279(53123,"Agua desmineralizada",2,1);
-PlanDeCuentas regis280(53124,"Materiales descartables",2,1);
+PlanDeCuentas regis277(53121,"Conservacion de productos",4,1);
+PlanDeCuentas regis278(53122,"Materiales de produccion",4,1);
+PlanDeCuentas regis279(53123,"Agua desmineralizada",4,1);
+PlanDeCuentas regis280(53124,"Materiales descartables",4,1);
 PlanDeCuentas regis281(53125,"Materiales control calidad",2,1);
-PlanDeCuentas regis282(53126,"Mater.analisis y reactivos",2,1);
-PlanDeCuentas regis283(53127,"Otros consumos productivos",2,1);
-PlanDeCuentas regis284(53128,"Materiales de Empaque",2,1);
-PlanDeCuentas regis285(53129,"Validaciones",2,1);
-PlanDeCuentas regis286(53130,"Calificaciones",2,1);
-PlanDeCuentas regis287(53131,"Calibraciones",2,1);
+PlanDeCuentas regis282(53126,"Mater.analisis y reactivos",4,1);
+PlanDeCuentas regis283(53127,"Otros consumos productivos",4,1);
+PlanDeCuentas regis284(53128,"Materiales de Empaque",4,1);
+PlanDeCuentas regis285(53129,"Validaciones",4,1);
+PlanDeCuentas regis286(53130,"Calificaciones",4,1);
+PlanDeCuentas regis287(53131,"Calibraciones",4,1);
 PlanDeCuentas regis288(5313,"GASTOS FINANCIEROS",1,0);
-PlanDeCuentas regis289(53131,"Intereses por prestamos",2,1);
-PlanDeCuentas regis290(53132,"Intereses por cargas sociales",2,1);
-PlanDeCuentas regis291(53133,"Difer. de cambio negativas",2,1);
-PlanDeCuentas regis292(53134,"Ajuste cuentas corrientes",2,1);
+PlanDeCuentas regis289(53131,"Intereses por prestamos",4,1);
+PlanDeCuentas regis290(53132,"Intereses por cargas sociales",4,1);
+PlanDeCuentas regis291(53133,"Difer. de cambio negativas",4,1);
+PlanDeCuentas regis292(53134,"Ajuste cuentas corrientes",4,1);
 PlanDeCuentas regis293(53135,"Comisiones y gs. Bancarios",2,1);
-PlanDeCuentas regis294(53136,"IDC LEY 25.413 S/DEBITOS",2,1);
-PlanDeCuentas regis295(53137,"Deudores Incobrables",2,1);
-PlanDeCuentas regis296(53138,"Diferencia de Inventarios",2,1);
+PlanDeCuentas regis294(53136,"IDC LEY 25.413 S/DEBITOS",4,1);
+PlanDeCuentas regis295(53137,"Deudores Incobrables",4,1);
+PlanDeCuentas regis296(53138,"Diferencia de Inventarios",4,1);
 PlanDeCuentas regis297(53139,"Gtos y Comis Tarjetas",2,1);
-PlanDeCuentas regis298(53140,"Intereses varios",2,1);
-PlanDeCuentas regis299(53141,"Otros gastos financieros",2,1);
+PlanDeCuentas regis298(53140,"Intereses varios",4,1);
+PlanDeCuentas regis299(53141,"Otros gastos financieros",4,1);
 PlanDeCuentas regis300(53142,"RECPAM",4,1);
+
 
 regis1.guardarEnDiscoReset();
 regis2.guardarEnDisco();

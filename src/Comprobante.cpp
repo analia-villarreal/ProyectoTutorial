@@ -283,10 +283,11 @@ void Comprobante::cargar(int tipo,const char *usuario)
     gotoxy(13,36);cout<<"PV: "<<endl;
     gotoxy(17,36);cin>> _pv;
     gotoxy(22,36);cout<<"NUMERO: "<<endl;
-    gotoxy(27,36);cin>> _numFac;
+    gotoxy(29,36);cin>> _numFac;
     //cuenta contable del proveedor
     gotoxy(4,37);cout<<"CUENTA CONTABLE"<<endl;
     rand_cuentas_contables();
+    gotoxy(17,37);cin>> _cuentaContable;
     gotoxy(4,39);cout<<"CANTIDAD: "<<endl;
     gotoxy(14,39);cin >> _cantidad;
     gotoxy(20,39);cout<<"PRECIO: $ "<<endl;

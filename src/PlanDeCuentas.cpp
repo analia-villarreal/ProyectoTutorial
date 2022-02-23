@@ -88,11 +88,12 @@ void PlanDeCuentas::mostrar()
     cout<< setw(0) <<"  ";
     cout<< setw(13) << _cuentaContable;
     cout<< setw(33) <<_descripcionCuenta;
-    cout<< setw(4) <<_estadoPlan;
+    cout<< setw(4) <<_tipoCuenta;
     cout<<endl;
 
 
 }
+
 bool PlanDeCuentas::guardarEnDisco()
 {
     bool guardo;
