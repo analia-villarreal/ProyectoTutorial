@@ -207,8 +207,8 @@ void buscarFacturasProveedor(int idProveedor)
             if(reg.getNumFac()!=0)
             {
 
-                gotoxy(12,21+i);
-                cout<<reg.getPV()<<"-"<< reg.getNumFac()<<"="<<reg.getImporteTotal();
+                gotoxy(13,21+i);
+                cout<<reg.getPV()<<" - "<< reg.getNumFac()<<" = "<<reg.getImporteTotal();
                 cout<<endl;
             }
         }
@@ -354,6 +354,33 @@ void rand_cuentas_contables()
 
 }
 
+void rand_cuentas_contables_OP()
+{
+
+
+
+    int vecCuentas[31]={11244,11311,11321,12214,12221,12231,12241,12251,5333,5334,5351,5354,5363,5367,5369,53611,53610,5371,5384,5388,5389,53111,53112,53114,53115,53116,53117,53119,53125,53135,53139};
+
+
+    for(int j=0; j<31; j++)
+    {
+        PlanDeCuentas reg;
+
+        int pos;
+
+        pos=buscarPosCuenta(vecCuentas[j]);
+
+        reg.leerDeDisco(pos);
+        rlutil::locate(83,15+j);
+        cout<<vecCuentas[j]<<" - "<< reg.getDescripcionCuenta()<<endl;
+
+    }
+
+
+
+}
+
+
 void listarProveedores()
 {
     int i=0;
@@ -449,8 +476,8 @@ int buscarFacturasDarDeBaja(int num, int pv, int prov){
 
 }
 
-void menuComprobante()
-{
+void menuComprobante(){
+
 
     Comprobante reg;
     int opc;
@@ -555,8 +582,8 @@ void menuComprobante()
 
 }
 
-void menuProveedor()
-{
+void menuProveedor(){
+
     Proveedor reg1;
     int opc;
     while(true)
@@ -612,8 +639,8 @@ void menuProveedor()
 
 }
 
-void menuPlandeCuentas()
-{
+void menuPlandeCuentas(){
+
     PlanDeCuentas obj;
     int opc;
     while(true)
@@ -667,8 +694,8 @@ void menuPlandeCuentas()
     }
 
 }
-void bajaCuenta()
-{
+void bajaCuenta(){
+
     PlanDeCuentas reg;
     int cuenta, opc;
     cout << "-----------------------------------------------------------"<< endl;
@@ -769,7 +796,7 @@ void menuOP()
         case 2:
             system("pause");
             break;
-        case 3:
+        case 3:regis.listarOrdenesDePago();
             system("pause");
             break;
         case 0:

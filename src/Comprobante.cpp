@@ -16,6 +16,8 @@
 #include "Reportes.h"
 #include "Mensaje.h"
 #include "Login.h"
+#include "OrdenDePago.h"
+#include "MediosDePagos.h"
 
 using namespace std;
 using namespace rlutil;
@@ -334,7 +336,7 @@ void Comprobante::cargar(int tipo,const char *usuario)
     gotoxy(4,47);cout<<"CANTIDAD: "<<endl;
     gotoxy(14,47);cin >> _cantidad;
 
-    Mensaje msjx2("TIP!! SI SON ARTICULOS INVENTARIABLES LA CANTIDAD ES IMPORTANTE A TENERLO EN CUENTA", Mensaje::TipoMensaje::Exito,83,32);
+    Mensaje msjx2("TIP!! SI SON ARTICULOS INVENTARIABLES LA CANTIDAD ES IMPORTANTE A TENERLO EN CUENTA", Mensaje::TipoMensaje::Error,83,32);
     msjx2.mostrar();
     resetColor();
 

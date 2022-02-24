@@ -970,7 +970,7 @@
 1645668030 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
 	"Funciones.h"
 
-1645667455 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
+1645724451 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
 	<string>
 
 1604164361 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\rlutil.h
@@ -1041,7 +1041,7 @@
 	"Mensaje.h"
 	"Funciones.h"
 
-1636598550 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mediosdepagos.cpp
+1645724697 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mediosdepagos.cpp
 	"MediosDePagos.h"
 	<iostream>
 	"Impuesto.h"
@@ -1062,20 +1062,25 @@
 	"rlutil.h"
 	"Mensaje.h"
 
-1636599543 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
+1645723180 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
 	"OrdenDePago.h"
-	"Impuesto.h"
-	"Proveedor.h"
-	"PlanDeCuentas.h"
-	"rlutil.h"
-	"Funciones.h"
-	"MediosDePagos.h"
 	<iostream>
 	<cstring>
 	<cstdlib>
 	<conio.h>
 	<clocale>
 	<cstdio>
+	<iomanip>
+	"Comprobante.h"
+	"Impuesto.h"
+	"PlanDeCuentas.h"
+	"Proveedor.h"
+	"Funciones.h"
+	"rlutil.h"
+	"Fecha.h"
+	"Reportes.h"
+	"Mensaje.h"
+	"Login.h"
 
 1645668272 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
 	<iostream>
@@ -1135,7 +1140,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645668777 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645724451 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1163,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645672107 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645721444 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>
@@ -1176,4 +1181,6 @@
 	"Reportes.h"
 	"Mensaje.h"
 	"Login.h"
+	"OrdenDePago.h"
+	"MediosDePagos.h"
 
