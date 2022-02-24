@@ -1135,7 +1135,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645667987 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645668777 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1158,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645666972 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645672107 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>

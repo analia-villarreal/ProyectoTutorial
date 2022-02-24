@@ -184,11 +184,11 @@ void Comprobante::cargar(int tipo,const char *usuario)
     setlocale(LC_ALL, "Spanish");
     int x;
     setTipo(tipo);
+    resetColor();
+    Mensaje msjs("GENIAL!!!", Mensaje::TipoMensaje::Info,83,4);
 
-    Mensaje msj1("Es el dia de la fecha", Mensaje::TipoMensaje::Info,83,5);
-
-    msj1.mostrar();
-
+    msjs.mostrar();
+    resetColor();
     if(getTipo()==1){
         gotoxy(4,3);cout<<"ESTA CARGANDO UNA FACTURA" <<endl;
     }
@@ -207,6 +207,10 @@ void Comprobante::cargar(int tipo,const char *usuario)
         gotoxy(5,8);cout << "DIA: " << endl;
         gotoxy(10,8);cin >> d;
     }
+    Mensaje msj1("SE REGISTRA PARA ESTA FECHA EL DIA DE HOY", Mensaje::TipoMensaje::Exito,83,7);
+
+    msj1.mostrar();
+    resetColor();
 
     gotoxy(4,9);cout<<"MES: "<<endl;
     gotoxy(9,9);cin>>m;
@@ -216,6 +220,8 @@ void Comprobante::cargar(int tipo,const char *usuario)
        gotoxy(5,11);cout << "MES: " << endl;
        gotoxy(9,11);cin >> m;
     }
+
+
 
     gotoxy(4,12);cout<<"AÑO: "<<endl;
     gotoxy(9,12);cin>>a;
@@ -232,6 +238,21 @@ void Comprobante::cargar(int tipo,const char *usuario)
     _fechaContabilizacion.setMes(m);
     _fechaContabilizacion.setAnio(a);
 
+    Mensaje msj6("SE REGISTRA PARA ESTA FECHA EL DIA DEL COMPROBANTE FISICO", Mensaje::TipoMensaje::Exito,83,14);
+    msj6.mostrar();
+    resetColor();
+
+    Mensaje msj7("--TIP---", Mensaje::TipoMensaje::Exito,83,17);
+    Mensaje msj3("SEGUN CADA COMPAÑIA SI ES NECESARIO CARGAR IVA CREDITO FISCAL,", Mensaje::TipoMensaje::Exito,83,17);
+    Mensaje msj4("LOS PRIMEROS DIAS DEL MES SE USA COMO FECHA DE CONTABILIZACION" , Mensaje::TipoMensaje::Exito,83,18);
+    Mensaje msj5("EL ULTIMO DIA DEL MES ANTERIOR, SIEMPRE SE PUEDE PREGUNTAR A EL RESPONSABLE A CARGO =)", Mensaje::TipoMensaje::Exito,83,19);
+    Mensaje msj11("SU CONSULTA NO MOLESTA!", Mensaje::TipoMensaje::Exito,83,20);
+    msj7.mostrar();
+    msj3.mostrar();
+    msj4.mostrar();
+    msj5.mostrar();
+    msj11.mostrar();
+    resetColor();
     gotoxy(4,15);cout<<"FECHA COMPROBANTE"<<endl;
 
     int dd,mm,aa;
@@ -267,6 +288,11 @@ void Comprobante::cargar(int tipo,const char *usuario)
     _fechaComp.setMes(mm);
     _fechaComp.setAnio(aa);
 
+    Mensaje msjx("TE DAMOS UNA LISTA DE PROVEEDORES PARA QUE PUEDAR SEGUIR!!", Mensaje::TipoMensaje::Exito,83,24);
+
+    msjx.mostrar();
+    resetColor();
+
     gotoxy(4,25);cout<<"PROVEEDOR"<<endl;
 
     rand_proveedores();
@@ -277,19 +303,41 @@ void Comprobante::cargar(int tipo,const char *usuario)
 
     gotoxy(4,35);buscarNombProveedor(_idProveedor);
 
+    Mensaje msjd1("RECORDA:  ", Mensaje::TipoMensaje::Exito,83,34);
+    Mensaje msjd2("A o B-> PARA RESPONSABLE INSCRIPTO SEGUN SI DISCRIMINA IVA O NO", Mensaje::TipoMensaje::Exito,83,35);
+    Mensaje msjd3("C -> PARA MONOTRIBUTISTA ", Mensaje::TipoMensaje::Exito,83,36);
+    Mensaje msjd4("M -> PARA RESPONSABLE INSCRIPTO CON FACTURA M ", Mensaje::TipoMensaje::Exito,83,37);
+    msjd1.mostrar();
+    msjd2.mostrar();
+    msjd3.mostrar();
+    msjd4.mostrar();
+    resetColor();
+
     gotoxy(13,38);cout<<"LETRA: "<<endl;
     gotoxy(21,38);cin>> _letra;
+
+
     // Mostrar opciones
     gotoxy(13,40);cout<<"PV: "<<endl;
     gotoxy(17,40);cin>> _pv;
     gotoxy(22,40);cout<<"NUMERO: "<<endl;
     gotoxy(32,40);cin>> _numFac;
+
+    Mensaje msj8("TE DAMOS UNA LISTA DE CUENTAS A IMPUTAR!!", Mensaje::TipoMensaje::Exito,83,40);
+
+    msj8.mostrar();
+    resetColor();
     //cuenta contable del proveedor
     gotoxy(4,45);cout<<"CUENTA CONTABLE: "<<endl;
     rand_cuentas_contables();
     gotoxy(25,45);cin>> _cuentaContable;
     gotoxy(4,47);cout<<"CANTIDAD: "<<endl;
     gotoxy(14,47);cin >> _cantidad;
+
+    Mensaje msjx2("TIP!! SI SON ARTICULOS INVENTARIABLES LA CANTIDAD ES IMPORTANTE A TENERLO EN CUENTA", Mensaje::TipoMensaje::Exito,83,38);
+    msjx2.mostrar();
+    resetColor();
+
     gotoxy(4,52);cout<<"PRECIO: $ "<<endl;
     gotoxy(15,52);cin >> _PU;
     float tasa;
