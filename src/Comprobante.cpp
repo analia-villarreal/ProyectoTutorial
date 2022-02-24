@@ -320,8 +320,8 @@ void Comprobante::mostrar()
     cout << left;
     _fechaContabilizacion.mostrar();
     _fechaComp.mostrar();
-    cout<< setw(17) <<  _idProveedor;
-    cout<< setw(43) << nom;
+    cout<< setw(6) <<  _idProveedor;
+    cout<< setw(40) << nom;
     cout<< setw(6) << _tipo;
     cout<< setw(5) << _pv;
     cout<< setw(13) << _numFac;
@@ -337,14 +337,14 @@ void Comprobante::listarComprobantes()
 {
     int i=0;
     cout << left;
-    cout<< "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout<< "--------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
     cout<< "                                                                              LISTADO COMPROBANTES                                  " << endl;
-    cout<< "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout<< "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 
     cout<< setw(13) <<" FECHA CONTA ";
-    cout<< setw(13) <<" FECHA COMP ";
-    cout<< setw(18) <<" CODIGO PROVEEDOR ";
-    cout<< setw(43) <<" NOMBRE PROVEEDOR ";
+    cout<< setw(15) <<" FECHA COMP ";
+    cout<< setw(6) <<"  PROVEEDOR ";
+    cout<< setw(30) <<"  ";
     cout<< setw(6) << " TIPO ";
     cout<< setw(4) << " PV ";
     cout<< setw(13) << " COMPROBANTE ";

@@ -65,6 +65,8 @@ void crearUsuario();
 
 void rand_cuentas_contables();
 
+void bajaCuenta();
+
 void ingresarUsuario();
 
 void resetTablas();

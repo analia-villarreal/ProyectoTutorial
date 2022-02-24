@@ -29,6 +29,7 @@ class PlanDeCuentas
         void cargar();
         void mostrar();
         bool guardarEnDisco();
+        void guardarEnDisco(int);
         bool guardarEnDiscoReset();
         bool leerDeDisco(int);
         void listarPlanDeCuentas();

@@ -149,9 +149,27 @@ void PlanDeCuentas::listarPlanDeCuentas()
     int pos=0;
     while(leerDeDisco(pos)==true)
     {
+        if(getEstadoPlan()==true){
+          mostrar();
+        }
 
-        mostrar();
         pos++;
     }
     //cout<<endl;
+}
+
+void PlanDeCuentas::guardarEnDisco(int pos)
+{
+
+    bool guardo;
+    FILE *p;
+    p = fopen("plandecuentas.dat", "rb+");
+    if (p == NULL){
+        return;
+    }
+    fseek(p, sizeof(PlanDeCuentas)*pos, SEEK_SET);
+    guardo = fwrite(this, sizeof(PlanDeCuentas), 1, p);
+    fclose(p);
+    return;
+
 }

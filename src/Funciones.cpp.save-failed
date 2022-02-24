@@ -671,9 +671,9 @@ void bajaCuenta()
 {
     PlanDeCuentas reg;
     int cuenta, opc;
-    cout << "-----------------------------------------------------------"<< endl;
+    cout << "-----------------------------------------------------------";<< endl;
     cout << "----------------------- CUENTA A DESACTIVAR ---------------" << endl;
-    cout << "-----------------------------------------------------------"<< endl;
+    cout << "-----------------------------------------------------------";<< endl;
     int pos=0;
     while(reg.leerDeDisco(pos)==true)
     {
@@ -685,9 +685,9 @@ void bajaCuenta()
         pos++;
     }
 
-    cout << "-----------------------------------------------------------"<< endl;
-    cout << "SELECCIONE EL CODIGO DEL PROVEEDOR QUE DESEE DAR DE BAJA:  "<< endl;
-    cout << "-----------------------------------------------------------"<< endl;
+    cout << "-----------------------------------------------------------";<< endl;
+    cout << "SELECCIONE EL CODIGO DEL PROVEEDOR QUE DESEE DAR DE BAJA:  ";<< endl;
+    cout << "-----------------------------------------------------------";<< endl;
     cin >> cuenta;
 
     char nom[45]= {};
@@ -705,9 +705,9 @@ void bajaCuenta()
         reg2.leerDeDisco(pos);
         reg2.setEstado(false);
         reg2.guardarEnDisco(pos);
-        cout << "------------------------"<< endl;
-        cout << "LA CUENTA SE DESACTIVO. " << endl;
-        cout << "------------------------"<< endl;
+
+        cout << "LA CUENTA SE DESACTIVO" << endl;
+
 
     }
     else return;
@@ -2422,10 +2422,6 @@ regis300.guardarEnDisco();
 
 
 //regist1.guardarEnDiscoReset();
-
-
-  cout << "RESETEO EXITOSO!!!" <<endl;
-
 
 
 }

@@ -967,10 +967,10 @@
 	"Proveedor.h"
 	"MediosDePagos.h"
 
-1645656628 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
+1645668030 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\plandecuentas.h
 	"Funciones.h"
 
-1645495386 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
+1645667455 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\funciones.h
 	<string>
 
 1604164361 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\rlutil.h
@@ -994,7 +994,7 @@
 1644346155 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\login.h
 	<string>
 
-1645663348 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\fecha.cpp
+1645666856 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\fecha.cpp
 	"Fecha.h"
 	"Proveedor.h"
 	"Impuesto.h"
@@ -1077,7 +1077,7 @@
 	<clocale>
 	<cstdio>
 
-1645575776 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
+1645668272 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\plandecuentas.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>
@@ -1135,7 +1135,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645661703 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645667987 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1158,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645662293 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645666972 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>

@@ -79,7 +79,7 @@ void Fecha::mostrar()
         cout << "/";
         if (_mes<10){cout << "0" << _mes;}
         else{cout << _mes;}
-        cout << "/" << _anio <<" ";
+        cout << "/" << _anio <<"   ";
     }
     //cout << _dia << "/" << _mes << "/" << _anio;
 
