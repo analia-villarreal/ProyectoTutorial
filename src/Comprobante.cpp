@@ -313,18 +313,19 @@ void Comprobante::cargar(int tipo,const char *usuario)
 
 void Comprobante::mostrar()
 {
-
+    float importeNeto=0;
     char nom[45]={};
     strcpy(nom,buscarNombProv2(_idProveedor));
+    importeNeto=_importeTotal-getIVA();
     cout << left;
     _fechaContabilizacion.mostrar();
     _fechaComp.mostrar();
     cout<< setw(18) <<  _idProveedor;
-    cout<< setw(30) << nom;
+    cout<< setw(45) << nom;
     cout<< setw(6) << _tipo;
     cout<< setw(13) << _numFac;
     cout<< setw(16) << _cuentaContable;
-    cout<< setw(14) <<"IMPORTE NETO";
+    cout<< setw(14) << importeNeto;
     cout<< setw(10) << getIVA();
     cout<< setw(10) << _importeTotal;
     cout << endl;
@@ -335,14 +336,14 @@ void Comprobante::listarComprobantes()
 {
     int i=0;
     cout << left;
-    cout<< "--------------------------------------" << endl;
-    cout<< "        LISTADO COMPROBANTES          " << endl;
-    cout<< "--------------------------------------" << endl;
+    cout<< "-----------------------------------------------------------------------------------------------" << endl;
+    cout<< "                                             LISTADO COMPROBANTES                              " << endl;
+    cout<< "------------------------------------------------------------------------------------------------" << endl;
 
     cout<< setw(23) <<" FECHA CONTABILIZACION ";
     cout<< setw(23) <<" FECHA COMPROBANTE ";
     cout<< setw(18) <<" CODIGO PROVEEDOR ";
-    cout<< setw(30) <<" NOMBRE PROVEEDOR ";
+    cout<< setw(45) <<" NOMBRE PROVEEDOR ";
     cout<< setw(6) << " TIPO ";
     cout<< setw(13) << " COMPROBANTE ";
     cout<< setw(16) <<" CUENTA CONTABLE ";
@@ -353,7 +354,7 @@ void Comprobante::listarComprobantes()
 
     while(leerDeDisco(i))
     {
-        mostrar();
+        if(_estado!=2){mostrar();}
         i++;
     }
     cout << endl;

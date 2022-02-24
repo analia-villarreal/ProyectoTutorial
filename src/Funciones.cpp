@@ -430,12 +430,34 @@ float buscarAlicuota(int idProveedor)
     return -1;
 }
 
+int buscarFacturasDarDeBaja(int num, int pv, int prov){
+
+    Comprobante reg;
+
+    int i=0;
+
+    while(reg.leerDeDisco(i))
+    {
+        if(num == reg.getNumFac() && pv == reg.getPV() && prov == reg.getIdProveedor())
+        {
+            return i;
+        }
+        i++;
+    }
+
+    return -1;//NUNCA ENCONTRO EL REGISTRO
+
+}
+
 void menuComprobante()
 {
 
-
     Comprobante reg;
     int opc;
+    int num;
+    int pv;
+    int prov;
+    int pos;
     while(true)
     {
         system("cls");
@@ -478,15 +500,46 @@ void menuComprobante()
             }
             else
             {
-                cout<<"ERROR DE DATOS"<<endl;
+                cout<<"ERROR DE DATOS";
             }
             gotoxy(4,56);
             system("pause");
             break;
-        case 2: rand_cuentas_contables();
+        case 2:
+            gotoxy(40,5);cout << "INGRESE CODIGO DE PROVEEDOR ,  PV y FACTURA A DAR DE BAJA: "<<endl;
+            gotoxy(40,5);cout << "***********************************************************"<<endl;
+            gotoxy(40,7);cout<<"CODIGO PROVEEDOR: "<<endl;
+            gotoxy(60,7);cin >> prov;
+            gotoxy(40,8);cout<<"PUNTO DE VENTA: "<<endl;
+            gotoxy(60,8);cin >> pv ;
+            gotoxy(40,9);cout<<"NUMERO FACTURA: "<<endl;
+            gotoxy(60,9);cin >> num ;
+
+            pos = buscarFacturasDarDeBaja(num,pv,prov);
+            if(pos >= 0)
+            {
+                reg.leerDeDisco(pos);
+                int estado;
+                if(reg.getEstado()==1)
+                {
+                    gotoxy(40,10);cout << "ESTADO ACTUAL: ACTIVO" << endl;
+                }
+                else{
+                    gotoxy(40,10);cout << "ESTADO ACTUAL: ANULADO" << endl;
+                }
+                gotoxy(40,12);cout << "DESEA DARLO DE BAJA? (1: NO / 2: SI) ";
+                gotoxy(80,12);cin >> estado;
+                reg.setEstado(estado);
+                reg.guardarEnDisco(pos);
+                gotoxy(40,13);cout << "REGISTRO DADO DE BAJA" << endl;
+
+            }
+            else
+            {
+                gotoxy(40,15);cout << "NO EXISTE LO BUSCADO" << endl;
+            }
             system("pause");
             break;
-        //BAJA COMPROBANTE;
         case 3:
             reg.listarComprobantes();
             system("pause");

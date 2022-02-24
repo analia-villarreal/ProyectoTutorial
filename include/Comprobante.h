@@ -22,6 +22,9 @@ class Comprobante
         float _IVA;
         float _importeTotal;
         int  _estado;
+           // 1	ABIERTO
+           // 2	ANULADO
+           // 3	PAGADO
         char _usuarioLogueado[25];
     public:
         Comprobante();

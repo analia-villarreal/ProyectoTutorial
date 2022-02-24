@@ -946,7 +946,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645489256 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\comprobante.h
+1645661408 c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\include\comprobante.h
 	"Fecha.h"
 	"Impuesto.h"
 	"Proveedor.h"
@@ -1135,7 +1135,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645658261 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645661703 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
@@ -1158,7 +1158,7 @@
 	"Mensaje.h"
 	"Login.h"
 
-1645658479 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
+1645661862 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\comprobante.cpp
 	<iostream>
 	<cstring>
 	<cstdlib>

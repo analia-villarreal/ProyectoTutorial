@@ -72,6 +72,6 @@ void Fecha::cargar()
 void Fecha::mostrar()
 {
 
-    cout << setw(23) << _dia << "/" << _mes << "/" << _anio;
+    cout << _dia << "/" << _mes << "/" << _anio;
 
 }
