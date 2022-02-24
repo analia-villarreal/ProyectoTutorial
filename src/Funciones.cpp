@@ -207,7 +207,7 @@ void buscarFacturasProveedor(int idProveedor)
             if(reg.getNumFac()!=0)
             {
 
-                gotoxy(13,21+i);
+                gotoxy(13,24);
                 cout<<reg.getPV()<<" - "<< reg.getNumFac()<<" = "<<reg.getImporteTotal();
                 cout<<endl;
             }
@@ -740,8 +740,8 @@ void bajaCuenta(){
     else return;
 
 }
-void menuOP()
-{
+void menuOP(){
+
     OrdenDePago regis;
     int opc;
     while(true)
@@ -765,7 +765,7 @@ void menuOP()
             gotoxy(40,5);
             cout << "REALIZAR PAGOS "<< endl;
             gotoxy(40,5);
-            cout << "PAGOS VARIOS : 1  PAGO A PROVEEDOR: 2"<< endl;
+            cout << "PAGOS VARIOS  : 1  PAGO A PROVEEDOR:  2"<< endl;
             gotoxy(40,6);
             cout<<" > ";
             cin>>tipoOP;
@@ -775,8 +775,8 @@ void menuOP()
             {
                 if(regis.guardarEnDisco()==true)
                 {
-                    gotoxy(4,41);
-                    cout<<"REGISTRO GRABADO EN EL ARCHIVO"<<endl;
+                    gotoxy(4,50);
+                    cout<<"REGISTRO GRABADO EXITOSAMENTE!"<<endl;
                     resetColor();
                 }
                 else
@@ -790,7 +790,7 @@ void menuOP()
             {
                 cout<<"ERROR DE DATOS"<<endl;
             }
-            gotoxy(4,42);
+            gotoxy(4,41);
             system("pause");
             break;
         case 2:
@@ -810,8 +810,8 @@ void menuOP()
 
 }
 
-void bajaProveedor()
-{
+void bajaProveedor(){
+
 
     int i=0, idProv, opc;
     char *cpynombre;

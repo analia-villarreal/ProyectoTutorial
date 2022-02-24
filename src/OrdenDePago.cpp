@@ -138,7 +138,7 @@ bool OrdenDePago::getEstadoOP()
 void OrdenDePago::cargar(int tipoOP)
 {
 
-    marco_comprobante(1,2,80,48);
+    marco_comprobante(1,2,80,55);
 
     setlocale(LC_ALL, "Spanish");
     int x;
@@ -314,8 +314,8 @@ void OrdenDePago::cargar(int tipoOP)
         int pos;
 
         gotoxy(10,35);cout<<"INGREGAR PV Y NUMERO DE FACTURA A PAGAR: "<<endl;
-        gotoxy(45,35);cin>> pv;
-        gotoxy(50,35);cin>> numfac;
+        gotoxy(55,35);cin>> pv;
+        gotoxy(65,35);cin>> numfac;
 
         Comprobante reg;
 
@@ -333,7 +333,7 @@ void OrdenDePago::cargar(int tipoOP)
                 gotoxy(12,37);cout << "ESTADO ACTUAL: ANULADO" << endl;
             }
             gotoxy(12,39);cout << "DESEA PAGAR ESTA FACTURA? (1: NO / 3: SI) ";
-            gotoxy(30,39);cin >> estado;
+            gotoxy(52,39);cin >> estado;
             reg.setEstado(estado);
             reg.guardarEnDisco(pos);
         }
@@ -342,7 +342,7 @@ void OrdenDePago::cargar(int tipoOP)
 
         reg1.leerDeDisco(pos);
 
-        gotoxy(15,45);cout<< "Importe a pagar" << reg1.getImporteTotal();
+        //gotoxy(15,44);cout<< "Importe a pagar" << reg1.getImporteTotal();
 
         setImporteTotal(reg1.getImporteTotal());
 
@@ -353,9 +353,10 @@ void OrdenDePago::cargar(int tipoOP)
         float retenIIBB=0;
 
         retenIIBB=(((reg1.getImporteTotal())*2)/100);
-
-        gotoxy(17,45);cout<<" RETENCION IMPUESTOS A LAS GANANCIAS " << retenGanan <<endl;
-        gotoxy(18,45);cout<<" RETENCION IIBB BUENOS AIRES " << retenIIBB <<endl;
+        cout << fixed;
+        gotoxy(17,45);cout<<" RETENCION IMPUESTOS A LAS GANANCIAS: "<< setprecision(2) << retenGanan <<endl;
+        cout << fixed;
+        gotoxy(17,46);cout<<" RETENCION IIBB BUENOS AIRES: "<< setprecision(2) << retenIIBB <<endl;
 
         setRetGanancias(retenGanan);
         setRetIIBB(retenIIBB);
@@ -368,19 +369,19 @@ void OrdenDePago::cargar(int tipoOP)
 
         obj.listarMediosDePagos();
 
-        gotoxy(20,37);cout<<"Forma de pago: "<< endl;
+        gotoxy(20,48);cout<<"Forma de pago: "<< endl;
 
         int medio;
 
-        gotoxy(45,37);cin>>medio;
+        gotoxy(45,48);cin>>medio;
 
         setFormaDePago(medio);
 
-        gotoxy(50,37);buscarNombreMedioDePago(medio);
+        gotoxy(50,48);buscarNombreMedioDePago(medio);
 
         setImporteAPagar((reg1.getImporteTotal())-retenGanan-retenIIBB);
 
-        gotoxy(22,40);cout<<"CREADA EXITOSAMENTE!!!"<< endl;
+
     }
 
     setEstadoOP(1);

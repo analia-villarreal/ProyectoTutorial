@@ -104,8 +104,8 @@ void MediosDePagos::listarMediosDePagos(){
     cout<<endl;
     while(leerDeDisco(i))
     {
-        gotoxy(85,5+i);cout<<_idMp;
-        gotoxy(93,5+i);cout<<_descripcionMedioPago;
+        gotoxy(85,50+i);cout<<_idMp;
+        gotoxy(93,50+i);cout<<_descripcionMedioPago;
         cout << endl;
         i++;
     }

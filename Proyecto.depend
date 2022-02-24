@@ -1041,7 +1041,7 @@
 	"Mensaje.h"
 	"Funciones.h"
 
-1645724697 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mediosdepagos.cpp
+1645732537 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\mediosdepagos.cpp
 	"MediosDePagos.h"
 	<iostream>
 	"Impuesto.h"
@@ -1062,7 +1062,7 @@
 	"rlutil.h"
 	"Mensaje.h"
 
-1645723180 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
+1645732587 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
 	"OrdenDePago.h"
 	<iostream>
 	<cstring>
@@ -1140,7 +1140,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645724451 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645732905 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
