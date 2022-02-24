@@ -330,62 +330,75 @@ void OrdenDePago::cargar(int tipoOP)
                 gotoxy(12,37);cout << "ESTADO ACTUAL: ACTIVO" << endl;
             }
             else{
-                gotoxy(12,37);cout << "ESTADO ACTUAL: ANULADO" << endl;
+
+                gotoxy(12,37);cout << "ESTADO ACTUAL: ANULADO o PAGADO" << endl;
+                system("pause");
+                menuOP();
+
+
             }
             gotoxy(12,39);cout << "DESEA PAGAR ESTA FACTURA? (1: NO / 3: SI) ";
             gotoxy(56,39);cin >> estado;
             reg.setEstado(estado);
             reg.guardarEnDisco(pos);
+
+            Comprobante reg1;
+
+            reg1.leerDeDisco(pos);
+
+            //gotoxy(15,44);cout<< "Importe a pagar" << reg1.getImporteTotal();
+
+            setImporteTotal(reg1.getImporteTotal());
+
+            float retenGanan=0;
+
+            retenGanan=(((reg1.getImporteTotal())*3)/100);
+
+            float retenIIBB=0;
+
+            retenIIBB=(((reg1.getImporteTotal())*2)/100);
+            cout << fixed;
+            gotoxy(17,45);cout<<" RETENCION IMPUESTOS A LAS GANANCIAS: "<< setprecision(2) << retenGanan <<endl;
+            cout << fixed;
+            gotoxy(17,46);cout<<" RETENCION IIBB BUENOS AIRES: "<< setprecision(2) << retenIIBB <<endl;
+
+            setRetGanancias(retenGanan);
+            setRetIIBB(retenIIBB);
+
+            //setImporteAPagar(imp);
+            //setImporteTotal(imp);
+            //SETEAR EL COMPROBANTE COMO PAGO.
+
+            MediosDePagos obj;
+
+            obj.listarMediosDePagos();
+
+            gotoxy(20,48);cout<<"Forma de pago: "<< endl;
+
+            int medio;
+
+            gotoxy(45,48);cin>>medio;
+
+            setFormaDePago(medio);
+
+            gotoxy(50,48);buscarNombreMedioDePago(medio);
+
+            setImporteAPagar((reg1.getImporteTotal())-retenGanan-retenIIBB);
+
+            setEstadoOP(1);
+            resetColor();
+
+
+
         }
 
-        Comprobante reg1;
 
-        reg1.leerDeDisco(pos);
 
-        //gotoxy(15,44);cout<< "Importe a pagar" << reg1.getImporteTotal();
 
-        setImporteTotal(reg1.getImporteTotal());
-
-        float retenGanan=0;
-
-        retenGanan=(((reg1.getImporteTotal())*3)/100);
-
-        float retenIIBB=0;
-
-        retenIIBB=(((reg1.getImporteTotal())*2)/100);
-        cout << fixed;
-        gotoxy(17,45);cout<<" RETENCION IMPUESTOS A LAS GANANCIAS: "<< setprecision(2) << retenGanan <<endl;
-        cout << fixed;
-        gotoxy(17,46);cout<<" RETENCION IIBB BUENOS AIRES: "<< setprecision(2) << retenIIBB <<endl;
-
-        setRetGanancias(retenGanan);
-        setRetIIBB(retenIIBB);
-
-        //setImporteAPagar(imp);
-        //setImporteTotal(imp);
-        //SETEAR EL COMPROBANTE COMO PAGO.
-
-        MediosDePagos obj;
-
-        obj.listarMediosDePagos();
-
-        gotoxy(20,48);cout<<"Forma de pago: "<< endl;
-
-        int medio;
-
-        gotoxy(45,48);cin>>medio;
-
-        setFormaDePago(medio);
-
-        gotoxy(50,48);buscarNombreMedioDePago(medio);
-
-        setImporteAPagar((reg1.getImporteTotal())-retenGanan-retenIIBB);
 
 
     }
 
-    setEstadoOP(1);
-    resetColor();
 
 }
 
