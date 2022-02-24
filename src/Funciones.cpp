@@ -149,6 +149,26 @@ int buscarPosProveedor(int idProveedor)
 
 }
 
+bool buscarProveedorCategoria(int idProveedor)
+{
+    Proveedor reg;
+    int i = 0;
+    while(reg.leerDeDisco(i))
+    {
+        if ( idProveedor == reg.getIdProveedor())
+        {
+            if(strcmp(reg.getCategoria(),"MT")==true&&strcmp(reg.getCategoria(),"EX")==true){
+
+                return true;
+            }
+
+        }
+        i++;
+    }
+    return false;
+
+}
+
 bool buscarProveedor(int idProveedor)
 {
     Proveedor reg;

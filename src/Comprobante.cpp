@@ -345,8 +345,14 @@ void Comprobante::cargar(int tipo,const char *usuario)
     float tasa;
     tasa=buscarAlicuota(_idProveedor);
     float IVA;
+    if(buscarProveedorCategoria(_idProveedor)==true){
 
-    IVA=(((_PU*_cantidad)*tasa)/100);
+        tasa=0;
+    }
+    else{
+
+      IVA=(((_PU*_cantidad)*tasa)/100);
+    }
     setIVA(IVA);
     cout << fixed;
     gotoxy(37,52);cout<<"IVA: $  "<< setprecision(2) <<getIVA()<<endl;

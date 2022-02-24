@@ -27,6 +27,8 @@ int buscarFacturasDarDeBaja(int,int,int);
 
 void rand_cuentas_contables_OP();
 
+bool buscarProveedorCategoria(int);
+
 const char* buscarNombreCuentaContable(int);
 
 const char* buscarNombreMedioDePago(int);
