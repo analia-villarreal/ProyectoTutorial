@@ -345,7 +345,7 @@ void Comprobante::cargar(int tipo,const char *usuario)
     float tasa;
     tasa=buscarAlicuota(_idProveedor);
     float IVA;
-    if(buscarProveedorCategoria(_idProveedor)==true){
+    if(buscarProveedorCategoria(_idProveedor)==false){
 
         tasa=0;
     }

@@ -224,7 +224,7 @@ void buscarFacturasProveedor(int idProveedor)
     {
         if ( idProveedor == reg.getIdProveedor())
         {
-            if(reg.getNumFac()!=0)
+            if(reg.getNumFac()!=0&&reg.getEstado()==1)
             {
 
                 gotoxy(13,24);
