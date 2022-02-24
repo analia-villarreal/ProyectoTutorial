@@ -323,7 +323,7 @@ void Comprobante::cargar(int tipo,const char *usuario)
     gotoxy(22,40);cout<<"NUMERO: "<<endl;
     gotoxy(32,40);cin>> _numFac;
 
-    Mensaje msj8("TE DAMOS UNA LISTA DE CUENTAS A IMPUTAR!!", Mensaje::TipoMensaje::Exito,83,40);
+    Mensaje msj8("TE DAMOS UNA LISTA DE CUENTAS A IMPUTAR!!", Mensaje::TipoMensaje::Exito,83,39);
 
     msj8.mostrar();
     resetColor();
@@ -334,7 +334,7 @@ void Comprobante::cargar(int tipo,const char *usuario)
     gotoxy(4,47);cout<<"CANTIDAD: "<<endl;
     gotoxy(14,47);cin >> _cantidad;
 
-    Mensaje msjx2("TIP!! SI SON ARTICULOS INVENTARIABLES LA CANTIDAD ES IMPORTANTE A TENERLO EN CUENTA", Mensaje::TipoMensaje::Exito,83,38);
+    Mensaje msjx2("TIP!! SI SON ARTICULOS INVENTARIABLES LA CANTIDAD ES IMPORTANTE A TENERLO EN CUENTA", Mensaje::TipoMensaje::Exito,83,32);
     msjx2.mostrar();
     resetColor();
 

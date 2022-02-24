@@ -345,7 +345,7 @@ void rand_cuentas_contables()
         pos=buscarPosCuenta(vecCuentas[j]);
 
         reg.leerDeDisco(pos);
-        rlutil::locate(83,36+j);
+        rlutil::locate(83,40+j);
         cout<<vecCuentas[j]<<" - "<< reg.getDescripcionCuenta()<<endl;
 
     }
