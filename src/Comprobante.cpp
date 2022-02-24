@@ -320,9 +320,10 @@ void Comprobante::mostrar()
     cout << left;
     _fechaContabilizacion.mostrar();
     _fechaComp.mostrar();
-    cout<< setw(18) <<  _idProveedor;
-    cout<< setw(45) << nom;
+    cout<< setw(17) <<  _idProveedor;
+    cout<< setw(43) << nom;
     cout<< setw(6) << _tipo;
+    cout<< setw(5) << _pv;
     cout<< setw(13) << _numFac;
     cout<< setw(16) << _cuentaContable;
     cout<< setw(14) << importeNeto;
@@ -336,19 +337,20 @@ void Comprobante::listarComprobantes()
 {
     int i=0;
     cout << left;
-    cout<< "-----------------------------------------------------------------------------------------------" << endl;
-    cout<< "                                             LISTADO COMPROBANTES                              " << endl;
-    cout<< "------------------------------------------------------------------------------------------------" << endl;
+    cout<< "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout<< "                                                                              LISTADO COMPROBANTES                                  " << endl;
+    cout<< "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 
-    cout<< setw(23) <<" FECHA CONTABILIZACION ";
-    cout<< setw(23) <<" FECHA COMPROBANTE ";
+    cout<< setw(13) <<" FECHA CONTA ";
+    cout<< setw(13) <<" FECHA COMP ";
     cout<< setw(18) <<" CODIGO PROVEEDOR ";
-    cout<< setw(45) <<" NOMBRE PROVEEDOR ";
+    cout<< setw(43) <<" NOMBRE PROVEEDOR ";
     cout<< setw(6) << " TIPO ";
+    cout<< setw(4) << " PV ";
     cout<< setw(13) << " COMPROBANTE ";
     cout<< setw(16) <<" CUENTA CONTABLE ";
     cout<< setw(14) <<" IMPORTE NETO ";
-    cout<< setw(10) <<" TASA IVA ";
+    cout<< setw(10) <<" IVA ";
     cout<< setw(10) <<" TOTAL ";
     cout << endl;
 

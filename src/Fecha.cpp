@@ -72,6 +72,15 @@ void Fecha::cargar()
 void Fecha::mostrar()
 {
 
-    cout << _dia << "/" << _mes << "/" << _anio;
+    if (_dia==0){cout << "0/0/0";}
+    else {
+        if (_dia<10){cout << "0" << _dia;}
+        else{cout <<_dia;}
+        cout << "/";
+        if (_mes<10){cout << "0" << _mes;}
+        else{cout << _mes;}
+        cout << "/" << _anio <<" ";
+    }
+    //cout << _dia << "/" << _mes << "/" << _anio;
 
 }
