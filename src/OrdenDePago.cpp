@@ -331,8 +331,8 @@ void OrdenDePago::cargar(int tipoOP)
             }
             else{
 
-                gotoxy(12,37);cout << "ESTADO ACTUAL: ANULADO o PAGADO" << endl;
-                system("pause");
+                gotoxy(12,37);cout << "EL COMPROBANTE ESTA ANULADO o PAGADO" << endl;
+                gotoxy(12,38);system("pause");
                 menuOP();
 
 
