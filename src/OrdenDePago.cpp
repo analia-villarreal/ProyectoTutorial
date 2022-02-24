@@ -333,7 +333,7 @@ void OrdenDePago::cargar(int tipoOP)
                 gotoxy(12,37);cout << "ESTADO ACTUAL: ANULADO" << endl;
             }
             gotoxy(12,39);cout << "DESEA PAGAR ESTA FACTURA? (1: NO / 3: SI) ";
-            gotoxy(52,39);cin >> estado;
+            gotoxy(56,39);cin >> estado;
             reg.setEstado(estado);
             reg.guardarEnDisco(pos);
         }
@@ -399,7 +399,7 @@ void OrdenDePago::mostrar()
         _fechaContabilizacion.mostrar();
         cout << setw(2)<< _tipoOP;
         cout << setw(4)<< _idProveedor;
-        cout <<setw(30)<< nom;
+        cout <<setw(55)<< nom;
         cout <<setw(9)<<  _numComp;
         cout <<setw(9)<<  _retIIBB;
         cout <<setw(9)<< _retGanancias;

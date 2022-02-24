@@ -1062,7 +1062,7 @@
 	"rlutil.h"
 	"Mensaje.h"
 
-1645732587 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
+1645734249 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\ordendepago.cpp
 	"OrdenDePago.h"
 	<iostream>
 	<cstring>
@@ -1140,7 +1140,7 @@
 	"Proveedor.h"
 	"rlutil.h"
 
-1645732905 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
+1645733451 source:c:\users\usuario\documents\utn\laboratorio de programacion ii\proyectotutorial\proyectotutorial\src\funciones.cpp
 	"Funciones.h"
 	<iostream>
 	<cstring>
